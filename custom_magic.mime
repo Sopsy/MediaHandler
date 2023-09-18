@@ -1,0 +1,39 @@
+# The default magic.mime in linux fails to detect some media files correctly.
+# So this file is used as a backup to try again if it fails to see if a match is found here.
+
+0	string		ID3			Audio file with ID3 version 1
+!:mime audio/mpeg
+4	string		ftyp		ISO Media
+>8	string		mp4v		\b, MP4 (popular, probably some buggy converter)
+!:mime video/mp4
+>8	string		nvr1		\b, MP4 isom/mp42/nvr1 (Nokia 6.1)
+!:mime video/mp4
+>8	string		iso			\b, MP4 Base Media
+>>11	string		m 		v1 [ISO 14496-12:2003]
+!:mime	video/mp4
+>>11	string		2		v2 [ISO 14496-12:2005]
+!:mime	video/mp4
+>>11	string		3		v3
+!:mime	video/mp4
+>>11	string		4		v4
+!:mime	video/mp4
+>>11	string		5		v5
+!:mime	video/mp4
+>>11	string		6		v6
+!:mime	video/mp4
+>8	string		isml		\b, MP4 Base Media v2 [ISO 14496-12:2005]
+!:mime	video/mp4
+>8	string		mp71		\b, MP4 w/ MPEG-7 Metadata [per ISO 14496-12]
+!:mime	video/mp4
+>8	string		mp7t		\b, MPEG v4 system, MPEG v7 XML
+!:mime	video/mp4
+>8	string		mp7b		\b, MPEG v4 system, MPEG v7 binary XML
+!:mime	video/mp4
+>8	string		mpuf		\b, Compliance with the MMT Processing Unit format
+!:mime	video/mp4
+>8	string		msdh		\b, Media Segment conforming to ISO base media file format.
+!:mime	video/mp4
+>8	string		msix		\b, Media Segment conforming to ISO base media file format.
+!:mime	video/mp4
+>8	string		mmp4		\b, MPEG v4 system, 3GPP Mobile
+!:mime	video/mp4
